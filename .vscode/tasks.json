@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dev server",
+      "type": "npm",
+      "script": "dev",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "typescript",
+        "pattern": { "regexp": "^$" },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".",
+          "endsPattern": "(Ready in|✓ Ready|started server on)"
+        }
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "portfolio-dev"
+      }
+    },
+    {
+      "label": "open preview (Simple Browser)",
+      "type": "shell",
+      "command": "echo Preview: http://localhost:3000",
+      "dependsOn": ["dev server"],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    }
+  ]
+}

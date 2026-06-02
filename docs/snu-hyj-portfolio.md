@@ -19,7 +19,7 @@
 | 외국어 | 한국어 (모국어), 영어 TOEFL iBT 111 (2025년 3월) |
 | 질적 연구 | 민족지학, 심층 인터뷰, 시각적 방법, 주제 분석 |
 | 디지털·양적 연구 | 데이터 시각화, 웹 데이터 수집, 인터랙티브 매핑 |
-| 소프트웨어 | HTML, CSS, Python, C, C#, Unity, Premiere Pro, Claude Code, Cursor, Obsidian |
+| 소프트웨어 | HTML, CSS, Python, C, C#, Unity, Premiere Pro, Claude Code, Obsidian |
 
 ### 학력
 

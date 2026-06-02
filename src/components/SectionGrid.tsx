@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 type SectionGridProps = {
   id?: string;
   title: string;
@@ -25,28 +27,73 @@ type TwoColumnEntryProps = {
 export function TwoColumnEntry({ label, children }: TwoColumnEntryProps) {
   return (
     <div className="grid gap-4 md:grid-cols-[220px_1fr] md:gap-10">
-      <h3 className="text-base font-bold md:text-lg">{label}</h3>
-      <div className="space-y-4 text-base leading-7">{children}</div>
+      <h3 className="text-lg font-bold tracking-tight md:text-xl">{label}</h3>
+      <div className="space-y-4 text-sm leading-7 md:text-base">{children}</div>
     </div>
   );
 }
 
-type PublicationItemProps = {
-  year: string;
-  title: string;
-  detail: string;
+type DatedEntryProps = {
+  date: string;
+  title?: string;
+  subtitle?: string;
+  meta?: string;
+  titleClassName?: string;
+  children?: ReactNode;
 };
 
-export function PublicationItem({ year, title, detail }: PublicationItemProps) {
+export function DatedEntry({
+  date,
+  title,
+  subtitle,
+  meta,
+  titleClassName = "",
+  children,
+}: DatedEntryProps) {
   return (
-    <article className="grid gap-1 md:grid-cols-[4rem_1fr] md:gap-6">
-      <span className="font-bold">{year}</span>
-      <div>
-        <p className="font-bold underline decoration-1 underline-offset-4">
-          {title}
-        </p>
-        <p className="mt-1 opacity-80">{detail}</p>
+    <div className="space-y-2">
+      <div className="grid gap-1 md:grid-cols-[1fr_auto] md:gap-6">
+        <div>
+          {title ? (
+            <p className={`font-bold ${titleClassName}`.trim()}>{title}</p>
+          ) : null}
+          {subtitle ? <p className="opacity-80">{subtitle}</p> : null}
+          {meta ? <p className="italic">{meta}</p> : null}
+        </div>
+        <p className="shrink-0 opacity-80 md:text-right">{date}</p>
       </div>
-    </article>
+      {children ? <div>{children}</div> : null}
+    </div>
+  );
+}
+
+type DatedEntryListProps = {
+  items: readonly {
+    date: string;
+    title: string;
+    org?: string;
+    meta?: string;
+    titleClassName?: string;
+    children?: ReactNode;
+  }[];
+  className?: string;
+};
+
+export function DatedEntryList({ items, className = "space-y-4" }: DatedEntryListProps) {
+  return (
+    <div className={className}>
+      {items.map((item) => (
+        <DatedEntry
+          key={item.title}
+          date={item.date}
+          title={item.title}
+          subtitle={item.org}
+          meta={item.meta}
+          titleClassName={item.titleClassName}
+        >
+          {item.children}
+        </DatedEntry>
+      ))}
+    </div>
   );
 }
