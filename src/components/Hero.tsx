@@ -29,10 +29,10 @@ export function Hero() {
       <div className="mx-auto flex flex-col items-center gap-4 md:mx-0">
         <div className="relative h-56 w-56 overflow-hidden rounded-full border-2 border-black bg-black/5 md:h-72 md:w-72">
           <Image
-            src="/profile.svg"
+            src="/profile.jpg"
             alt={`${portfolio.name} 프로필 사진`}
             fill
-            className="object-cover grayscale"
+            className="object-cover object-center"
             priority
             sizes="(max-width: 768px) 224px, 288px"
           />
