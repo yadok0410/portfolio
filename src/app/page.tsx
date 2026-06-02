@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className="min-h-screen bg-portfolio-yellow">
         <Hero />
 
         <SectionGrid id="research" title="Research">

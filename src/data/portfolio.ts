@@ -1,10 +1,8 @@
 export const portfolio = {
   name: "황예정",
-  title: "서울대학교 언론정보학과 석사과정",
-  footerQuote: {
-    text: "Communication as an Assemblage of Movement.",
-    source: "2025 SNU–UTokyo–NCCU Joint Symposium",
-  },
+  title: "안녕하세요, 서울대학교 언론정보학과 석사과정 황예정입니다",
+  footerQuote:
+    "Communication\u00a0as\u00a0an\u00a0Assemblage\u00a0of\u00a0Movement.",
   contact: {
     phone: "010-7670-2990",
     email: "ymdsri0410@snu.ac.kr",
@@ -26,7 +24,6 @@ export const portfolio = {
     },
   },
   skills: [
-    { category: "언어", content: "영어 TOEFL iBT 111 (2025.03)" },
     {
       category: "질적 연구",
       content: "민족지학, 심층 인터뷰, 시각적 방법, 주제 분석",
@@ -53,12 +50,6 @@ export const portfolio = {
       org: "서울대학교 미학과",
       date: "2023",
       note: "최우등 졸업 (Summa Cum Laude)",
-    },
-    {
-      degree: "교환학생",
-      org: "피츠버그 대학교",
-      date: "2022.01–2022.05",
-      note: "English Literature 및 Film Studies",
     },
   ],
   publications: [

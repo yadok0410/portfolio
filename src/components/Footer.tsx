@@ -5,13 +5,10 @@ export function Footer() {
   return (
     <footer className="border-t border-black/10">
       <div className="mx-auto max-w-6xl px-6 py-16 md:px-10 md:py-24">
-        <blockquote className="mb-16 max-w-4xl">
-          <p className="text-2xl font-bold leading-snug md:text-4xl md:leading-tight">
-            &ldquo;{portfolio.footerQuote.text}&rdquo;
+        <blockquote className="mb-16">
+          <p className="w-fit max-w-full text-[clamp(0.8125rem,3.6vw,2.25rem)] font-bold leading-tight whitespace-nowrap">
+            &ldquo;{portfolio.footerQuote}&rdquo;
           </p>
-          <cite className="mt-4 block text-sm not-italic opacity-80 md:text-base">
-            {portfolio.footerQuote.source}
-          </cite>
         </blockquote>
 
         <nav className="flex flex-wrap gap-x-6 gap-y-2 text-sm md:text-base">

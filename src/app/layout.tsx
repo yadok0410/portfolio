@@ -20,8 +20,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={`${notoSansKr.variable} scroll-smooth`}>
-      <body className="min-h-screen bg-portfolio-yellow font-sans text-black antialiased">
+    <html
+      lang="ko"
+      className={`${notoSansKr.variable} min-h-screen scroll-smooth bg-portfolio-yellow`}
+      style={{ backgroundColor: "#f5d300" }}
+    >
+      <body
+        className="min-h-screen bg-portfolio-yellow font-sans text-black antialiased"
+        style={{ backgroundColor: "#f5d300" }}
+      >
         {children}
       </body>
     </html>
